@@ -1,5 +1,6 @@
 import { Entity, PrimaryColumn, Column, Long } from "typeorm";
 import * as bcrypt from "bcryptjs";
+import { type } from "os";
 
 @Entity()
 export class User {
@@ -16,7 +17,7 @@ export class User {
     @Column()
     password: string;
 
-    @Column()
+    @Column({type: 'bigint'})
     cellphone: number;
 
     hashPassword() {
