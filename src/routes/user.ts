@@ -26,7 +26,6 @@ import { Router } from "express";
   //Delete one user
   router.delete(
     "/:id([0-9]+)",
-    checkJwt,
     UserController.deleteUser
   );
 
